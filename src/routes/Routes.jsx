@@ -5,6 +5,7 @@ import Login from "../components/Login";
 import Register from "../components/Register";
 import Blog from "../components/Blog";
 import ViewDetails from "../components/ViewDetails";
+import ErrorPage from "../components/ErrorPage";
 
 const router = createBrowserRouter([
     {
@@ -31,7 +32,11 @@ const router = createBrowserRouter([
                 path:'/details/:id',
                 element:<ViewDetails></ViewDetails>,
                 loader: ({params}) => fetch(`http://localhost:5000/data/${params.id}`)
-            }
+            },
+            {
+                path:'*',
+                element: <ErrorPage></ErrorPage>
+              }
         ]
     }
 ])
