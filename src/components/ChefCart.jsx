@@ -11,7 +11,7 @@ const ChefCart = () => {
 
     useEffect(() => {
         setTimeout(() => {
-        fetch('http://localhost:5000/data')
+        fetch('https://chef-kitchenary-server-tanjumtanha.vercel.app/data')
             .then(res => res.json())
             .then(data => {
                 setData(data);

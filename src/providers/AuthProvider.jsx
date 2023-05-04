@@ -11,32 +11,32 @@ const githubProvider = new GithubAuthProvider();
 const AuthProvider = ({children}) => {
     const [user,setUser] = useState(null);
     const [loading,setLoading] = useState(true);
-
+    // create user
     const createUser = (email,password) =>{
         setLoading(true);
         return createUserWithEmailAndPassword(auth,email,password);
     }
-
+    // user signin
     const signInUser = (email,password) =>{
         setLoading(true);
         return signInWithEmailAndPassword(auth,email,password);
     }
-
+// user sign in by google
     const googleSignIn = () =>{
         setLoading(true);
         return signInWithPopup(auth,googleProvider);
     }
-
+// user signin by github
     const githubSignIn = () =>{
         setLoading(true);
         return signInWithPopup(auth,githubProvider);
     }
-
+// signout
     const signOutUser = () =>{
         setLoading(true);
         return signOut(auth);
     }
-
+// update user profile
     const updateUserData = (user,name,photo) =>{
         return updateProfile(user, {
             displayName:name,
@@ -47,7 +47,7 @@ const AuthProvider = ({children}) => {
 
     useEffect(()=>{
         const unsubscribe = onAuthStateChanged(auth, loggedUser =>{
-            console.log("logged in user inside auth state");
+            //console.log("logged in user inside auth state");
             setUser(loggedUser);
             setLoading(false)
         })

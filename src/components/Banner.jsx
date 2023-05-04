@@ -11,8 +11,8 @@ const Banner = () => {
                     alt="First slide"
                 />
                 <Carousel.Caption>
-                    <h3>Enjoy Cooking</h3>
-                    <h5>Browse through over many tasty recipe!</h5>
+                    <h3 className='fs-2'>Enjoy Cooking</h3>
+                    <h5 className='fs-4'>Browse through over many tasty recipe!</h5>
                 </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
@@ -22,8 +22,8 @@ const Banner = () => {
                     alt="Second slide"
                 />
                 <Carousel.Caption>
-                    <h3>Ultimate Book of Recipes</h3>
-                    <h5>You can see many tasty recipes from here!</h5>
+                    <h3 className='fs-2'>Ultimate Book of Recipes</h3>
+                    <h5 className='fs-4'>You can see many tasty recipes from here!</h5>
                 </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
@@ -33,9 +33,8 @@ const Banner = () => {
                     alt="Third slide"
                 />
                 <Carousel.Caption>
-                    <h3>Best Recipes</h3>
-                    <h5>
-                        See our best recipe from our best chef and try it at home!
+                    <h3 className='fs-2'>Best Recipes</h3>
+                    <h5 className='fs-4'>See our best recipe from our best chef and try it at home!
                     </h5>
                 </Carousel.Caption>
             </Carousel.Item>

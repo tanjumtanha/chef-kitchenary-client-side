@@ -32,7 +32,7 @@ const router = createBrowserRouter([
             {
                 path:'/details/:id',
                 element:<PrivateRoute><ViewDetails></ViewDetails></PrivateRoute>,
-                loader: ({params}) => fetch(`http://localhost:5000/data/${params.id}`)
+                loader: ({params}) => fetch(`https://chef-kitchenary-server-tanjumtanha.vercel.app/data/${params.id}`)
             },
             {
                 path:'*',

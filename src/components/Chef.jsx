@@ -19,7 +19,7 @@ const Chef = ({ data }) => {
             </div>
 
             <div className='mb-2'>
-                <FaThumbsUp></FaThumbsUp> <span >{likes}</span>
+                <FaThumbsUp className='text-danger'></FaThumbsUp> <span >{likes}</span>
             </div>
             <Link to={`/details/${id}`}><Button className='btn-danger'>View Details</Button></Link>
 
