@@ -19,7 +19,7 @@ const Header = () => {
     return (
         <Navbar collapseOnSelect expand="lg" bg="light" variant="light" border="danger">
             <Container>
-                <Navbar.Brand className='text-danger' href="#home">CHEF KITCHENARY</Navbar.Brand>
+                <Navbar.Brand href="#home"><span className='text-danger'>CHEF</span><span className='text-primary'> KITCHENARY</span></Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="mx-auto gap-2">
