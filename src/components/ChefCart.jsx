@@ -28,7 +28,7 @@ const ChefCart = () => {
         return <div className='d-flex justify-content-center align-items-center'><Spinner animation="border" variant="danger" className='mx-auto'/></div>;
       }
     return (
-        <div className='mt-4 text-center w-75 mx-auto'>
+        <div className='mt-4 text-center w-75 mx-md-auto'>
             <h2 className='text-danger' style={{backgroundColor:'lightpink'}}>Some Rising Star of Japanese Cuisine</h2>
             <div className='card-group gap-4 mb-4 mt-4'>
                 {

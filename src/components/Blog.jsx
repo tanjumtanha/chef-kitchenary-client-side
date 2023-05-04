@@ -1,9 +1,10 @@
 import React from 'react';
-import { Button, Container } from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
+import DownloadPdf from './DownloadPdf';
 
 const Blog = () => {
     return (
-        <Container>
+        <Container className='w-50 mx-auto' id='pageToDownload'>
             <h2>Question Answer</h2>
             <div>
                 <h4>What is the differences between uncontrolled and controlled components?</h4>
@@ -34,9 +35,8 @@ const Blog = () => {
                 <li>Organization: Custom hooks can help us organize our code and separate concerns by breaking up complex functionality into smaller, more manageable pieces.</li>
                 </p>
             </div>
-
            <div className='text-center mb-3'>
-           <Button className='btn-danger p-2'>Download Pdf</Button>
+            <DownloadPdf rootElementId="pageToDownload" downloadFileName="testPage"></DownloadPdf>
            </div>
         </Container>
     );
