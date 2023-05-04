@@ -2,6 +2,7 @@ import React from 'react';
 import { Carousel } from 'react-bootstrap';
 
 const Banner = () => {
+    // Banner on the top of the home Page
     return (
         <Carousel variant="dark" >
             <Carousel.Item>

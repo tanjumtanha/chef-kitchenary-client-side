@@ -15,6 +15,7 @@ const Login = () => {
     const from  = location.state?.from?.pathname || '/';
     
     const handelGoogleSignIn = () =>{
+        // call googl sign in from auth provider
         googleSignIn()
         .then(result => {
             const user = result.user;
@@ -39,6 +40,7 @@ const Login = () => {
 
     const handleSignIn = event =>{
         event.preventDefault();
+        // get value from input field
         const form = event.target;
         const email = form.email.value;
         const password = form.password.value;

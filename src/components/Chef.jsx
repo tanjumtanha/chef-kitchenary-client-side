@@ -8,7 +8,7 @@ const Chef = ({ data }) => {
 
     return (
         <div className="card p-3" style={{ backgroundColor: 'lightcyan' }}>
-            <img style={{ height: '300px' }} src={picture} alt="" />
+            <img className='rounded' style={{ height: '300px' }} src={picture} alt="" />
             <div className="card-body">
                 <h4 className="card-title">{name}</h4>
                 <h6>Years of experience : {experience}</h6>

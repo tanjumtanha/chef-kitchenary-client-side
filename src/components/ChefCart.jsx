@@ -8,7 +8,7 @@ const ChefCart = () => {
     const { id } = useParams();
     const [data, setData] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
-
+    // fetch all chef data
     useEffect(() => {
         setTimeout(() => {
         fetch('https://chef-kitchenary-server-tanjumtanha.vercel.app/data')
@@ -23,7 +23,7 @@ const ChefCart = () => {
 
     const data1 = data.slice(0,3);
     const data2 = data.slice(3,6);
-    
+    // spinner show when data is loading
     if (isLoading) {
         return <div className='d-flex justify-content-center align-items-center'><Spinner animation="border" variant="danger" className='mx-auto'/></div>;
       }
@@ -31,6 +31,7 @@ const ChefCart = () => {
         <div className='mt-4 text-center w-75 mx-auto'>
             <h2 className='text-danger py-2' style={{backgroundColor:'lightpink'}}>Some Rising Star of Japanese Cuisine</h2>
             <div className='card-group gap-4 mb-4 mt-4'>
+                {/* send each chef data to the chef page to show information on card group */}
                 {
 
                     data1.map(singleData => <Chef

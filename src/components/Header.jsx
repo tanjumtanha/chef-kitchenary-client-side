@@ -28,6 +28,7 @@ const Header = () => {
                         <ActiveRouter to='/about'>About Us</ActiveRouter>
                     </Nav>
                     <Nav>
+                        {/* tooltip used when user will hover the image icon it will show user name */}
                         { <OverlayTrigger
                                 placement="right"
                                 delay={{ show: 250, hide: 400 }}
