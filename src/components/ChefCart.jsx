@@ -1,19 +1,31 @@
 import React, { useEffect, useState } from 'react';
 import Chef from './Chef';
-import { CardGroup } from 'react-bootstrap';
+import { CardGroup, Spinner } from 'react-bootstrap';
+import { useParams } from 'react-router-dom';
 
 const ChefCart = () => {
+    const { id } = useParams();
     const [data, setData] = useState([]);
+    const [isLoading, setIsLoading] = useState(true);
+
     useEffect(() => {
+        setTimeout(() => {
         fetch('http://localhost:5000/data')
             .then(res => res.json())
-            .then(data => setData(data))
+            .then(data => {
+                setData(data);
+                setIsLoading(false);
+              })
             .catch(error => console.log(error))
-    }, [])
+        }, 500);
+    }, [id])
 
     const data1 = data.slice(0,3);
     const data2 = data.slice(3,6);
     
+    if (isLoading) {
+        return <div className='d-flex justify-content-center align-items-center'><Spinner animation="border" variant="danger" className='mx-auto'/></div>;
+      }
     return (
         <div className='mt-4 text-center w-75 mx-auto'>
             <h2 className='text-danger'>Some Rising Star of Japanese Cuisine</h2>

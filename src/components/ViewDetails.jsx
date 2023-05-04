@@ -19,7 +19,7 @@ const ViewDetails = () => {
     return (
         <div className='w-75 mx-auto mb-4'>
             <div className='mb-4'>
-                <div className="card p-3 d-flex flex-row gap-4" style={{ backgroundColor: 'lightcyan' }}>
+                <div className="card p-3 d-flex flex-md-row gap-4" style={{ backgroundColor: 'lightcyan' }}>
                     <div>
                         <img className='mt-4 rounded' style={{ height: '300px', width: '300px' }} src={picture} alt="" />
                     </div>
@@ -29,7 +29,7 @@ const ViewDetails = () => {
                             <h6>Years of experience : {experience}</h6>
                             <h6>Recipes : {recipes.length}</h6>
                             <div>
-                                {recipes.map(recipe => <li className='ms-0'>{recipe.name}</li>)}
+                                {recipes.map((recipe,index) => <li key={index} className='ms-0'>{recipe.name}</li>)}
                             </div>
                             <p className='fs-5'>BIO: {bio}</p>
                             <div className='mb-2'>
