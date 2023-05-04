@@ -1,9 +1,9 @@
 import React, { useContext } from 'react';
 import { Button, Container, Nav, Navbar, OverlayTrigger, Tooltip } from 'react-bootstrap';
-import { FaUserCircle } from "react-icons/fa";
 import { AuthContext } from '../providers/AuthProvider';
 import { Link } from 'react-router-dom';
 import { toast } from 'react-toastify';
+import ActiveRouter from './ActiveRouter';
 
 const Header = () => {
     const { user, signOutUser } = useContext(AuthContext);
@@ -22,10 +22,10 @@ const Header = () => {
                 <Navbar.Brand className='text-danger' href="#home">CHEF KITCHENARY</Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
-                    <Nav className="mx-auto">
-                        <Link className='text-danger text-decoration-none me-2' to='/'>Home</Link>
-                        <Link className='text-danger text-decoration-none me-2' to='/blog'>Blog</Link>
-                        <Link className='text-danger text-decoration-none' to='/about'>About Us</Link>
+                    <Nav className="mx-auto gap-2">
+                        <ActiveRouter to='/'>Home</ActiveRouter>
+                        <ActiveRouter to='/blog'>Blog</ActiveRouter>
+                        <ActiveRouter to='/about'>About Us</ActiveRouter>
                     </Nav>
                     <Nav>
                         { <OverlayTrigger
