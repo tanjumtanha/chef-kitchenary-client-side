@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Chef from './Chef';
 import { CardGroup, Spinner } from 'react-bootstrap';
 import { useParams } from 'react-router-dom';
+import Gallary from './Gallary';
 
 const ChefCart = () => {
     const { id } = useParams();
@@ -28,7 +29,7 @@ const ChefCart = () => {
       }
     return (
         <div className='mt-4 text-center w-75 mx-auto'>
-            <h2 className='text-danger'>Some Rising Star of Japanese Cuisine</h2>
+            <h2 className='text-danger' style={{backgroundColor:'lightpink'}}>Some Rising Star of Japanese Cuisine</h2>
             <div className='card-group gap-4 mb-4 mt-4'>
                 {
 
@@ -49,6 +50,10 @@ const ChefCart = () => {
 
                 }
             </div>
+
+            <Gallary key={data.id}
+                data={data}
+            ></Gallary>
         </div>
     );
 };
