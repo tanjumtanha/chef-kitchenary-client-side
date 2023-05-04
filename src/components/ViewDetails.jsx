@@ -37,7 +37,7 @@ const ViewDetails = () => {
                                 {recipes.map((recipe, index) => <li key={index} className='ms-0'>{recipe.name}</li>)}
                             </div>
                             <p className='fs-6'>BIO: {bio}</p>
-                            <div className='mb-2'>
+                            <div className='mb-2 fs-4'>
                                 <FaThumbsUp className='text-danger'></FaThumbsUp> <span>{likes}</span>
                             </div>
                         </div>
