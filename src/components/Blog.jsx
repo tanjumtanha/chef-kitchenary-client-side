@@ -5,7 +5,7 @@ import DownloadPdf from './DownloadPdf';
 const Blog = () => {
     return (
         <Container className='w-50 mx-auto' id='pageToDownload'>
-            <h2>Question Answer</h2>
+            <h2 className='text-danger text-center'>Question Answer</h2>
             <div>
                 <h4>What is the differences between uncontrolled and controlled components?</h4>
                 <p>An uncontrolled component manages its own state internally. This means that the component stores its state in its own internal state, and the component updates its state without any external control or management.On the other hand a controlled component is a component that is controlled by its parent component. This means that the parent component manages the state of the child component and passes it down through props. The child component is not responsible for managing its own state.</p>
@@ -36,7 +36,7 @@ const Blog = () => {
                 </p>
             </div>
            <div className='text-center mb-3'>
-            <DownloadPdf rootElementId="pageToDownload" downloadFileName="testPage"></DownloadPdf>
+            <DownloadPdf elementId="pageToDownload" fileName="questionAnswer"></DownloadPdf>
            </div>
         </Container>
     );

@@ -20,8 +20,8 @@ const ViewDetails = () => {
         <div className='w-75 mx-auto mb-4'>
             <div className='mb-4'>
                 <div className="card p-3 d-flex flex-md-row gap-4" style={{ backgroundColor: 'lightcyan' }}>
-                    <div>
-                        <img className='mt-4 rounded' style={{ height: '300px', width: '300px' }} src={picture} alt="" />
+                    <div className='mt-4'>
+                    <img className='rounded mt-4' style={{ height: '300px' }} src={picture} alt="" />
                     </div>
                     <div className='p-3'>
                         <div className="card-body">

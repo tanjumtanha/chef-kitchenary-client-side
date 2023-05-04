@@ -4,7 +4,9 @@ const Photo = ({data}) => {
     return (
         <div className='mx-md-auto'>
             {
-                data.recipes.map(d => <img className='rounded m-4 ' style={{ height: '300px',width:'250px' }} src={d.image} alt="" />)
+                data.recipes.map(d => <div><img className='rounded m-4 ' style={{ height: '300px',width:'250px' }} src={d.image} alt="" />
+                <p>Name: {d.name}</p></div>
+                )
             }
         </div>
     );

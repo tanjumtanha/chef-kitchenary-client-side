@@ -6,6 +6,7 @@ import Register from "../components/Register";
 import Blog from "../components/Blog";
 import ViewDetails from "../components/ViewDetails";
 import ErrorPage from "../components/ErrorPage";
+import PrivateRoute from "./PrivateRoute";
 
 const router = createBrowserRouter([
     {
@@ -30,7 +31,7 @@ const router = createBrowserRouter([
             },
             {
                 path:'/details/:id',
-                element:<ViewDetails></ViewDetails>,
+                element:<PrivateRoute><ViewDetails></ViewDetails></PrivateRoute>,
                 loader: ({params}) => fetch(`http://localhost:5000/data/${params.id}`)
             },
             {

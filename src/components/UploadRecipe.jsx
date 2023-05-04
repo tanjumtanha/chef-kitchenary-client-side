@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const UploadRecipe = () => {
     return (
         <Container className="my-5 py-4">
-            <h2 className='text-danger text-center p-1 mb-3' style={{backgroundColor:'lightpink'}}>Would you like to share your recipes with us?</h2>
+            <h2 className='text-danger text-center py-2 mb-3' style={{backgroundColor:'lightpink'}}>Would you like to share your recipes with us?</h2>
             <Row>
                 <Col md={6} className="text-center">
                     <img style={{width:'100%'}} src="https://img.freepik.com/free-photo/top-view-table-full-delicious-food-composition_23-2149141353.jpg" alt="" />
