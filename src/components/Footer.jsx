@@ -38,7 +38,7 @@ const Footer = () => {
                             <li>123 Main Street</li>
                             <li>Dhaka, Bangladesh</li>
                             <li>Phone: +9999999999</li>
-                            <li>Email: info@foodrecipes.com</li>
+                            <li>Email: info@chefkitchenary.com</li>
                         </ul>
                     </Col>
                 </Row>

@@ -46,8 +46,8 @@ const ViewDetails = () => {
 
                 </Row>
             </div>
-            <h2 className='my-4 text-center'>Some Delicious Recipes of {name}</h2>
-            <div className='py-4'>
+            <h2 className='my-4 text-center text-danger p-2' style={{ backgroundColor: 'lightpink' }}>Some Delicious Recipes of {name}</h2>
+            <div className='py-2'>
                 <div className='card-group gap-4'>
                     {
 
