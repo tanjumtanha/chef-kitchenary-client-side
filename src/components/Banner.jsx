@@ -19,7 +19,7 @@ const Banner = () => {
             <Carousel.Item>
                 <img style={{height:'400px'}}
                     className="d-block w-75 mx-auto"
-                    src="https://cdn-bmalj.nitrocdn.com/uirOOtSrYrqqUksKHkiSCjZGZlPeXsmk/assets/static/optimized/rev-939cb5a/images/Traditional-Japanese-Food-Onigiri.jpg"
+                    src="https://wattention.com/wp-content/uploads/2020/11/4030290_m.jpg"
                     alt="Second slide"
                 />
                 <Carousel.Caption>

@@ -25,7 +25,7 @@ const UploadRecipe = () => {
                     <input type="text" name="" id="" placeholder='Write your recipe here' style={{ width: '100%', height: '100px' }} />
                     <br />
                     <br />
-                    <Link to='/'><Button className='btn-danger'>Submit</Button></Link>
+                    <Link to=''><Button className='btn-danger'>Submit</Button></Link>
                 </Col>
             </Row>
         </Container>

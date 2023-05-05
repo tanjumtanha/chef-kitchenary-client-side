@@ -12,12 +12,13 @@ const ViewDetails = () => {
     const chefCategory = useLoaderData();
     const { name, picture, experience, likes, bio, recipes } = chefCategory;
 
-    const [disable, setDisable] = useState(false);
-    const handelDisable = () => {
+    const [disabledIndexes, setDisabledIndexes] = useState([]);
+
+    const handelDisable = (index) => {
         toast.success('You have added this chef items on your favorite list!!', {
             position: toast.POSITION.TOP_CENTER
         });
-        setDisable(true);
+        setDisabledIndexes([...disabledIndexes, index]);
     }
     return (
         <div className='w-75 mx-auto mb-4'>
@@ -69,8 +70,13 @@ const ViewDetails = () => {
                                     <div className='ms-2 fs-4'>{singleData.rating}</div>
                                 </div>
                             </div>
-                            <Button disabled={disable} className='btn-danger' onClick={handelDisable}>Favorite</Button>
-                        </div>)
+                            <Button
+                                disabled={disabledIndexes.includes(index)}
+                                className='btn-danger'
+                                onClick={() => handelDisable(index)}
+                            >
+                                Favorite
+                            </Button>                        </div>)
                     }
                 </div>
             </div>
