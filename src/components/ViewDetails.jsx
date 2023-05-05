@@ -74,9 +74,8 @@ const ViewDetails = () => {
                                 disabled={disabledIndexes.includes(index)}
                                 className='btn-danger'
                                 onClick={() => handelDisable(index)}
-                            >
-                                Favorite
-                            </Button>                        </div>)
+                            >Favorite</Button>
+                        </div>)
                     }
                 </div>
             </div>
