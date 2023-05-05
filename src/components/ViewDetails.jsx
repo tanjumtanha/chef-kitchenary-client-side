@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { Button } from 'react-bootstrap';
+import { Button, Col, Row } from 'react-bootstrap';
 import { FaThumbsUp } from 'react-icons/fa';
-import { useLoaderData, useParams } from 'react-router-dom';
+import { Link, useLoaderData, useParams } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import LazyLoad from 'react-lazy-load';
 import { Rating } from '@smastrom/react-rating'
@@ -22,13 +22,13 @@ const ViewDetails = () => {
     return (
         <div className='w-75 mx-auto mb-4'>
             <div className='mb-4'>
-                <div className="card p-3 d-flex flex-md-row gap-4" style={{ backgroundColor: 'lightcyan' }}>
-                    <div className='mt-4'>
+                <Row className='p-4 mt-3' style={{ backgroundColor: 'lightcyan' }}>
+                    <Col md={6} className="text-center">
                         <LazyLoad offsetVertical={500} offsetHorizontal={500}>
                             <img className='rounded mt-4 w-100' style={{ height: '300px' }} src={picture} alt="" />
                         </LazyLoad>
-                    </div>
-                    <div className='p-3 mt-4'>
+                    </Col>
+                    <Col md={6}>
                         <div className="card-body">
                             <h4 className="card-title fs-4">Name: {name}</h4>
                             <h6>Years of experience : {experience}</h6>
@@ -40,10 +40,11 @@ const ViewDetails = () => {
                             <div className='mb-2 fs-4'>
                                 <FaThumbsUp className='text-danger'></FaThumbsUp> <span>{likes}</span>
                             </div>
+                            <Link to='/'><Button className='btn-danger'>Go To Home</Button></Link>
                         </div>
-                    </div>
+                    </Col>
 
-                </div>
+                </Row>
             </div>
             <h2 className='my-4 text-center'>Some Delicious Recipes of {name}</h2>
             <div className='py-4'>

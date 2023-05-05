@@ -1,6 +1,7 @@
 import React from 'react';
 import HeaderOutlet from './HeaderOutlet';
 import Footer from './Footer';
+import { ScrollRestoration } from 'react-router-dom';
 
 const Main = () => {
     return (
@@ -8,6 +9,7 @@ const Main = () => {
           {/* header and footer will display in every page */}
           <HeaderOutlet></HeaderOutlet>
           <Footer></Footer>
+          <ScrollRestoration></ScrollRestoration>
         </div>
     );
 };

@@ -54,11 +54,11 @@ const Register = () => {
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Email address</Form.Label>
-                    <Form.Control type="email" name='email' placeholder="Enter Your email" required />
+                    <Form.Control type="email" name='email' placeholder="Enter Your email" />
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formBasicPassword">
                     <Form.Label>Password</Form.Label>
-                    <Form.Control type="password" name='password' placeholder="Password" required />
+                    <Form.Control type="password" name='password' placeholder="Password"/>
                 </Form.Group>
                 <Button variant="danger" type="submit">
                     Register
